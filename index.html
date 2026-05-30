@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainsteady Tech — Building Tech Skills & Digital Solutions</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Brainsteady Tech provides premium website development, creative graphic design, coding tutoring, cybersecurity setups, and custom software project assistance.">
+  <meta name="keywords"
+    content="web development, coding tutor, graphic design, programming assignment help, cybersecurity, Linux, OpenStack, software mentor">
+  <meta name="author" content="Brainsteady Tech">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300f0ff'%3E%3Cpath d='M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5v4h2v-4h-2zm0 5v2h2v-2h-2z'/%3E%3C/svg%3E">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Page Loading Animation -->
+  <div id="page-loader">
+    <div class="cyber-spinner"></div>
+  </div>
+
+  <!-- Background Left Glow Spot -->
+  <div class="bg-glow-left"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.jpg" alt="Brainsteady Tech Logo" class="brand-logo me-2">
+        <span>BRAINSTEADY TECH</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="contact.html" class="btn-cyber btn-sm">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Hero Text -->
+        <div class="col-lg-6 reveal text-center text-lg-start">
+          <span class="badge-tech mb-3">BUILDING THE FUTURE</span>
+          <h1 class="display-4 fw-black mb-3">
+            Building Tech Skills & <span class="text-gradient-cyan-blue glow-text">Digital Solutions</span>
+          </h1>
+          <div class="hero-subtitle">
+            <p class="lead text-secondary">
+              We empower small businesses, startups, and students with high-quality software, modern designs, and
+              developer mentorship.
+            </p>
+            <div
+              class="d-inline-flex align-items-center text-start p-2 rounded bg-dark border border-secondary border-opacity-25"
+              style="min-height: 55px;">
+              <i class="bi bi-chevron-right text-accent-cyan me-2 fw-bold"></i>
+              <span id="typed-text" class="text-gradient font-sans fw-semibold"></span>
+              <span class="typed-cursor">|</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mt-4">
+            <a href="projects.html" class="btn-cyber"><i class="bi bi-folder2-open me-2"></i>View Projects</a>
+            <a href="resources.html" class="btn-cyber-outline"><i class="bi bi-journal-code me-2"></i>Start Learning</a>
+          </div>
+        </div>
+        <!-- Hero Arcade Cabinet (Pacman Game) -->
+        <div class="col-lg-6 reveal mt-5 mt-lg-0 text-center">
+          <div class="arcade-container mx-auto" style="max-width: 440px;">
+            <div class="arcade-header">
+              <span class="retro-arcade-badge"><i class="bi bi-controller me-1"></i>RETRO ARCADE</span>
+              <span class="small text-muted font-sans text-uppercase" style="font-size: 0.65rem;">LIVES: <span
+                  id="arcade-lives" class="text-danger fw-bold">❤️❤️❤️</span></span>
+            </div>
+            <div class="arcade-screen">
+              <div class="d-flex justify-content-between w-100 px-3 py-1 font-sans text-uppercase text-secondary"
+                style="font-size: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 8px;">
+                <span>1UP SCORE</span>
+                <span id="arcade-score" class="text-warning fw-bold">00</span>
+              </div>
+              <canvas id="pacman-canvas" width="360" height="360"></canvas>
+            </div>
+
+            <!-- D-Pad for Mobile controls -->
+            <div class="arcade-controls">
+              <button class="dpad-btn" id="dpad-up" aria-label="Up"><i class="bi bi-caret-up-fill"></i></button>
+              <div class="arcade-row">
+                <button class="dpad-btn" id="dpad-left" aria-label="Left"><i class="bi bi-caret-left-fill"></i></button>
+                <div style="width: 48px; height: 48px;"></div>
+                <button class="dpad-btn" id="dpad-right" aria-label="Right"><i
+                    class="bi bi-caret-right-fill"></i></button>
+              </div>
+              <button class="dpad-btn" id="dpad-down" aria-label="Down"><i class="bi bi-caret-down-fill"></i></button>
+            </div>
+
+            <div class="game-instructions mt-3 font-sans">
+              <p class="mb-0 small"><i class="bi bi-info-circle me-1 text-accent-cyan"></i> Use Arrow keys or D-Pad to
+                play. Eat dots, avoid ghosts!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Preview Section -->
+  <section class="py-5" id="services-preview">
+    <div class="container py-4">
+      <div class="section-header text-center reveal">
+        <h2 class="section-title">Core Services</h2>
+        <p class="section-subtitle">We deliver custom digital products and personalized learning support tailored to
+          your technical needs.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Website Development -->
+        <div class="col-md-4 reveal">
+          <div class="glass-card">
+            <div class="glass-card-header-icon">
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h4>Website Dev</h4>
+            <p class="text-secondary">Fully responsive portfolio sites, sleek landing pages, and web apps built using
+              modern static practices and responsive design.</p>
+            <a href="services.html#web-dev"
+              class="text-gradient-cyan-blue fw-semibold text-decoration-none d-inline-flex align-items-center mt-3">
+              Learn More <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Graphic Design -->
+        <div class="col-md-4 reveal">
+          <div class="glass-card">
+            <div class="glass-card-header-icon">
+              <i class="bi bi-palette"></i>
+            </div>
+            <h4>Graphic Design</h4>
+            <p class="text-secondary">Stunning event posters, modern social media graphics, startup branding elements,
+              and eye-catching marketing flyers.</p>
+            <a href="services.html#graphic-design"
+              class="text-gradient-cyan-blue fw-semibold text-decoration-none d-inline-flex align-items-center mt-3">
+              Learn More <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Coding Tutoring -->
+        <div class="col-md-4 reveal">
+          <div class="glass-card">
+            <div class="glass-card-header-icon">
+              <i class="bi bi-code-square"></i>
+            </div>
+            <h4>Coding Tutoring</h4>
+            <p class="text-secondary">One-on-one mentorship covering C++, SQL, Linux commands, cybersecurity basics, and
+              academic programming assignments.</p>
+            <a href="services.html#coding-tutoring"
+              class="text-gradient-cyan-blue fw-semibold text-decoration-none d-inline-flex align-items-center mt-3">
+              Learn More <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-5 bg-opacity-25 bg-black">
+    <div class="container py-4">
+      <div class="section-header text-center reveal">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">A startup founded by tech enthusiasts, driven by value, practical results, and
+          learning guidance.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Affordable Services -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="glass-card p-4 text-center">
+            <div class="mx-auto mb-3 text-gradient-cyan-blue" style="font-size: 2.5rem;">
+              <i class="bi bi-cash-coin"></i>
+            </div>
+            <h5>Affordable</h5>
+            <p class="small text-secondary mb-0">High-quality digital solutions and 1-on-1 tutoring styled to fit
+              startup and student budgets.</p>
+          </div>
+        </div>
+        <!-- Beginner-Friendly -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="glass-card p-4 text-center">
+            <div class="mx-auto mb-3 text-gradient-cyan-blue" style="font-size: 2.5rem;">
+              <i class="bi bi-people"></i>
+            </div>
+            <h5>Beginner-Friendly</h5>
+            <p class="small text-secondary mb-0">No complicated jargon. We break down programming, databases, and
+              networks step-by-step.</p>
+          </div>
+        </div>
+        <!-- Modern Tech Skills -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="glass-card p-4 text-center">
+            <div class="mx-auto mb-3 text-gradient-cyan-blue" style="font-size: 2.5rem;">
+              <i class="bi bi-braces-asterisk"></i>
+            </div>
+            <h5>Modern Skills</h5>
+            <p class="small text-secondary mb-0">We focus on skills that matter: Git workflow, Linux administration,
+              cybersecurity, and cloud labs.</p>
+          </div>
+        </div>
+        <!-- Real Experience -->
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="glass-card p-4 text-center">
+            <div class="mx-auto mb-3 text-gradient-cyan-blue" style="font-size: 2.5rem;">
+              <i class="bi bi-rocket-takeoff"></i>
+            </div>
+            <h5>Real Experience</h5>
+            <p class="small text-secondary mb-0">Gain hands-on portfolio additions through our structured custom
+              guidance projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Preview -->
+  <section class="py-5" id="projects-preview">
+    <div class="container py-4">
+      <div class="section-header text-center reveal">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Take a look at what we've built, ranging from IoT hardware integrations to cloud
+          virtualization environments.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-6 reveal">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="images/project1.jpg" alt="Smart Monitoring System" class="project-img">
+              <div class="project-overlay">
+                <a href="projects.html" class="btn-cyber btn-sm">Learn Details</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="badge-tech mb-2">IoT / Web</span>
+              <h4>Smart Monitoring System</h4>
+              <p class="small text-secondary">A fully integrated monitoring system employing ESP32-CAM and environmental
+                sensors with a live, glowing web control panel.</p>
+              <div class="d-flex gap-2 mt-3">
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">ESP32</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">IoT</span>
+                <span class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Web
+                  Dashboard</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-6 reveal">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="images/project2.jpg" alt="OpenStack Cloud Lab" class="project-img">
+              <div class="project-overlay">
+                <a href="projects.html" class="btn-cyber btn-sm">Learn Details</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="badge-tech mb-2">Cloud / Linux</span>
+              <h4>OpenStack Cloud Lab</h4>
+              <p class="small text-secondary">A self-hosted private cloud playground designed for students to deploy
+                virtualization servers, security layers, and network switches.</p>
+              <div class="d-flex gap-2 mt-3">
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Linux</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">OpenStack</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Virtualization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5 reveal">
+        <a href="projects.html" class="btn-cyber-outline">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-5 bg-opacity-25 bg-black">
+    <div class="container py-4">
+      <div class="section-header text-center reveal">
+        <h2 class="section-title">What Clients Say</h2>
+        <p class="section-subtitle">Read feedback from our students, local business owners, and software project
+          clients.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10 reveal">
+          <div class="glass-card">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators" style="bottom: -20px;">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                  <div class="testimonial-card">
+                    <div class="text-gradient-cyan-blue mb-3" style="font-size: 2rem;">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <p class="testimonial-text">
+                      "Brainsteady Tech built a gorgeous landing page for our local design shop. They completed it on
+                      time and gave us a responsive site that is generating new business. Highly professional startup!"
+                    </p>
+                    <h5 class="testimonial-client">Sarah Mitchell</h5>
+                    <div class="testimonial-role">Founder, Studio Bloom</div>
+                  </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                  <div class="testimonial-card">
+                    <div class="text-gradient-cyan-blue mb-3" style="font-size: 2rem;">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <p class="testimonial-text">
+                      "The programming tutoring here is amazing. I was struggling with C++ pointers and memory
+                      management in my sophomore university courses. Brainsteady Tech explained it visually and helped
+                      me ace my midterm projects!"
+                    </p>
+                    <h5 class="testimonial-client">Daniel Vance</h5>
+                    <div class="testimonial-role">Computer Science Student</div>
+                  </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                  <div class="testimonial-card">
+                    <div class="text-gradient-cyan-blue mb-3" style="font-size: 2rem;">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <p class="testimonial-text">
+                      "I needed a custom IoT monitoring dashboard prototype. They used an ESP32-CAM setup and gave me
+                      clean, readable HTML/JS codes that connect easily to my firmware. Will definitely hire again."
+                    </p>
+                    <h5 class="testimonial-client">Markus Chen</h5>
+                    <div class="testimonial-role">Hardware Developer, IoT Labs</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Banner -->
+  <section class="py-5 text-center reveal">
+    <div class="container py-5">
+      <div class="glass-card py-5 border-glow border-opacity-75"
+        style="background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(3, 7, 18, 0.7) 100%);">
+        <h2 class="display-6 fw-bold mb-3">Ready to Launch Your Next Project?</h2>
+        <p class="lead text-secondary max-width-600 mx-auto mb-4">
+          Whether you need a custom-built website, poster design branding, or code tutoring guidance, we're here to help
+          you succeed.
+        </p>
+        <a href="contact.html" class="btn-cyber"><i class="bi bi-chat-text me-2"></i>Get a Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black border-top border-secondary border-opacity-10">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <!-- Logo & Bio -->
+        <div class="col-lg-4">
+          <a class="navbar-brand d-flex align-items-center mb-3" href="index.html">
+            <img src="images/logo.jpg" alt="Brainsteady Tech Logo" class="brand-logo me-2">
+            <span>BRAINSTEADY</span>
+            <span>BRAINSTEADY TECH</span>
+            el="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="text-secondary hover-cyan" aria-label="LinkedIn"><i
+              class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com" target="_blank" class="text-secondary hover-cyan" aria-label="Instagram"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://wa.me" target="_blank" class="text-secondary hover-cyan" aria-label="WhatsApp"><i
+              class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <!-- Quick Navigation -->
+      <div class="col-md-4 col-lg-3 offset-lg-1">
+        <h6 class="text-uppercase fw-bold text-light mb-3">Navigation</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small">
+          <li><a href="index.html" class="text-secondary text-decoration-none hover-cyan">Home</a></li>
+          <li><a href="about.html" class="text-secondary text-decoration-none hover-cyan">About Us</a></li>
+          <li><a href="services.html" class="text-secondary text-decoration-none hover-cyan">Services</a></li>
+          <li><a href="projects.html" class="text-secondary text-decoration-none hover-cyan">Projects</a></li>
+          <li><a href="resources.html" class="text-secondary text-decoration-none hover-cyan">Resources</a></li>
+          <li><a href="contact.html" class="text-secondary text-decoration-none hover-cyan">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Services list -->
+      <div class="col-md-4 col-lg-2">
+        <h6 class="text-uppercase fw-bold text-light mb-3">Our Services</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+          <li>Website Development</li>
+          <li>Poster & Logo Design</li>
+          <li>1-on-1 Coding Tutoring</li>
+          <li>Academic Project Support</li>
+          <li>Cloud & Security Labs</li>
+        </ul>
+      </div>
+      <!-- Contact placeholder -->
+      <div class="col-md-4 col-lg-2">
+        <h6 class="text-uppercase fw-bold text-light mb-3">Contact</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2 small">
+          <li class="text-muted"><i class="bi bi-envelope-fill me-2 text-gradient-cyan-blue"></i>hello@brainsteady.tech
+          </li>
+          <li class="text-muted"><i class="bi bi-geo-alt-fill me-2 text-gradient-cyan-blue"></i>Remote Services</li>
+          <li class="text-muted"><i class="bi bi-clock-fill me-2 text-gradient-cyan-blue"></i>Mon - Fri, 9am - 6pm</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary border-opacity-10 my-4">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start small text-muted">
+        &copy; 2026 Brainsteady Tech. All rights reserved. Optimized for GitHub Pages.
+      </div>
+      <div class="col-md-6 text-center text-md-end small text-muted mt-2 mt-md-0">
+        Designed by a Technical Founder.
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button type="button" class="btn btn-primary" id="btn-back-to-top" aria-label="Scroll back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

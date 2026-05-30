@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects — Brainsteady Tech Portfolio</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Browse the Brainsteady Tech portfolio. See our projects: Smart Monitoring (IoT), OpenStack Cloud Labs, C++ Management Systems, and Custom Web Designs.">
+  <meta name="keywords"
+    content="ESP32 web server, OpenStack lab diagram, C++ portfolio, cybersecurity demo, Bootstrap templates">
+  <meta name="author" content="Brainsteady Tech">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300f0ff'%3E%3Cpath d='M12 2L2 22h20L12 2zm0 4l6.5 13H5.5L12 6zm-1 5v4h2v-4h-2zm0 5v2h2v-2h-2z'/%3E%3C/svg%3E">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Page Loading Animation -->
+  <div id="page-loader">
+    <div class="cyber-spinner"></div>
+  </div>
+
+  <!-- Background Left Glow Spot -->
+  <div class="bg-glow-left"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo.jpg" alt="Brainsteady Tech Logo" class="brand-logo me-2">
+        <span>BRAINSTEADY TECH</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resources.html">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="contact.html" class="btn-cyber btn-sm">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <section class="py-5 mt-5">
+    <div class="container pt-5">
+      <div class="section-header text-center reveal">
+        <span class="badge-tech mb-3">PORTFOLIO</span>
+        <h1 class="display-5 fw-bold">Our Engineering & <span class="text-gradient-cyan-blue glow-text">Design
+            Work</span></h1>
+        <p class="section-subtitle">A collection of software repositories, hardware integrations, cybersecurity setups,
+          and visual layouts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Filters & Grid Section -->
+  <section class="pb-5">
+    <div class="container">
+
+      <!-- Filter Button Group -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5 reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="programming">Programming</button>
+        <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="row g-4" id="projects-grid">
+
+        <!-- Project 1: Smart Monitoring System -->
+        <div class="col-md-6 col-lg-4 project-filter-item web programming reveal">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="images/project1.jpg" alt="Smart Monitoring System" class="project-img">
+              <div class="project-overlay">
+                <div class="d-flex gap-2">
+                  <a href="https://github.com" target="_blank" class="btn btn-dark btn-sm border border-secondary"
+                    aria-label="GitHub"><i class="bi bi-github"></i></a>
+                  <a href="https://loelstark.github.io/SMSAM" target="_blank" class="btn-cyber btn-sm">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span
+                class="badge bg-primary bg-opacity-25 text-accent-cyan border border-primary border-opacity-50 mb-2">Web
+                / IoT</span>
+              <h4>Smart Monitoring System</h4>
+              <p class="small text-secondary">
+                A remote camera and environmental monitoring hub built with ESP32-CAM, sending feeds to a custom
+                JavaScript web panel.
+              </p>
+              <div class="d-flex flex-wrap gap-1 mt-3">
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">ESP32-CAM</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">IoT</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Websockets</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: OpenStack Cloud Lab -->
+        <div class="col-md-6 col-lg-4 project-filter-item cybersecurity reveal">
+          <div class="project-card">
+            <div class="project-img-container">
+              <img src="images/project2.jpg" alt="OpenStack Cloud Lab Diagram" class="project-img">
+              <div class="project-overlay">
+                <div class="d-flex gap-2">
+                  <a href="https://github.com" target="_blank" class="btn btn-dark btn-sm border border-secondary"
+                    aria-label="GitHub"><i class="bi bi-github"></i></a>
+                  <a href="https://github.com" target="_blank" class="btn-cyber btn-sm">Documentation</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span
+                class="badge bg-primary bg-opacity-25 text-accent-cyan border border-primary border-opacity-50 mb-2">Cloud
+                / SysAdmin</span>
+              <h4>OpenStack Cloud Lab</h4>
+              <p class="small text-secondary">
+                A private virtualization lab configured on Linux server setups, supporting custom VM provisioning and
+                private networks.
+              </p>
+              <div class="d-flex flex-wrap gap-1 mt-3">
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Linux</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">OpenStack</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">KVM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Student Management System -->
+        <div class="col-md-6 col-lg-4 project-filter-item programming reveal">
+          <div class="project-card">
+            <div class="project-img-container">
+              <!-- Inline styled SVG for project mockup since no static image is generated -->
+              <svg class="project-img" viewBox="0 0 350 220"
+                style="background: radial-gradient(circle, #0f172a 0%, #030712 100%);">
+                <rect x="20" y="20" width="310" height="180" rx="6" fill="#090e1a" stroke="rgba(0, 240, 255, 0.2)"
+                  stroke-width="2" />
+                <text x="40" y="60" fill="#00f0ff" font-family="'Orbitron', sans-serif" font-size="14"
+                  font-weight="bold">> ./student_system</text>
+                <text x="40" y="90" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">1. Add New Student
+                  Record</text>
+                <text x="40" y="115" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">2. Edit GPA &
+                  Details</text>
+                <text x="40" y="140" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">3. Generate Grade
+                  Report</text>
+                <rect x="40" y="165" width="80" height="20" rx="3" fill="#2563eb" />
+                <text x="48" y="179" fill="#fff" font-family="'Inter', sans-serif" font-size="10" font-weight="bold">OOP
+                  Active</text>
+              </svg>
+              <div class="project-overlay">
+                <a href="https://github.com" target="_blank" class="btn btn-dark btn-sm border border-secondary"
+                  aria-label="GitHub"><i class="bi bi-github"></i> Repository</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span
+                class="badge bg-primary bg-opacity-25 text-accent-cyan border border-primary border-opacity-50 mb-2">Desktop
+                / OOP</span>
+              <h4>Student Management System</h4>
+              <p class="small text-secondary">
+                A command-line tool built using C++ with file streams and object-oriented structure to handle binary
+                database storage.
+              </p>
+              <div class="d-flex flex-wrap gap-1 mt-3">
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">C++</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">OOP</span>
+                <span class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">File
+                  I/O</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Cybersecurity Learning Lab -->
+        <div class="col-md-6 col-lg-4 project-filter-item cybersecurity reveal">
+          <div class="project-card">
+            <div class="project-img-container">
+              <svg class="project-img" viewBox="0 0 350 220"
+                style="background: radial-gradient(circle, #0f172a 0%, #030712 100%);">
+                <rect x="20" y="20" width="310" height="180" rx="6" fill="#090e1a" stroke="rgba(0, 240, 255, 0.2)"
+                  stroke-width="2" />
+                <circle cx="100" cy="110" r="20" fill="none" stroke="#3b82f6" stroke-width="2" />
+                <text x="85" y="114" fill="#3b82f6" font-family="'Orbitron', sans-serif" font-size="10">VM1</text>
+                <circle cx="250" cy="110" r="20" fill="none" stroke="#ef4444" stroke-width="2" />
+                <text x="235" y="114" fill="#ef4444" font-family="'Orbitron', sans-serif" font-size="10">ATT</text>
+                <path d="M120 110 L230 110" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="4" />
+                <rect x="160" y="90" width="30" height="40" fill="#1e293b" stroke="#cbd5e1" stroke-width="1" />
+                <text x="165" y="114" fill="#00f0ff" font-family="'Inter', sans-serif" font-size="9">FW</text>
+              </svg>
+              <div class="project-overlay">
+                <a href="https://github.com" target="_blank" class="btn btn-dark btn-sm border border-secondary"
+                  aria-label="GitHub"><i class="bi bi-github"></i> Repository</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <span
+                class="badge bg-primary bg-opacity-25 text-accent-cyan border border-primary border-opacity-50 mb-2">Networks
+                / Labs</span>
+              <h4>Cybersecurity Learning Lab</h4>
+              <p class="small text-secondary">
+                A localized training sandbox featuring packet sniffers, mock targets, and firewall systems to practice
+                Security+ concepts.
+              </p>
+              <div class="d-flex flex-wrap gap-1 mt-3">
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Linux</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Networking</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Firewalls</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Personal Portfolio Website -->
+        <div class="col-md-6 col-lg-4 project-filter-item web design reveal">
+          <div class="project-card">
+            <div class="project-img-container">
+              <svg class="project-img" viewBox="0 0 350 220"
+                style="background: radial-gradient(circle, #0f172a 0%, #030712 100%);">
+                <rect x="20" y="20" width="310" height="180" rx="6" fill="#090e1a" stroke="rgba(0, 240, 255, 0.2)"
+                  stroke-width="2" />
+                <rect x="35" y="35" width="280" height="30" rx="3" fill="#1e293b" />
+                <circle cx="50" cy="50" r="5" fill="#ef4444" />
+                <circle cx="65" cy="50" r="5" fill="#eab308" />
+                <circle cx="80" cy="50" r="5" fill="#22c55e" />
+                <text x="130" y="54" fill="#94a3b8" font-family="'Inter', sans-serif"
+                  font-size="10">brainsteady.tech</text>
+                <text x="50" y="110" fill="#00f0ff" font-family="'Orbitron', sans-serif" font-size="18"
+                  font-weight="bold">BRAINSTEADY</text>
+                <text x="50" y="135" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">Tech Brand &
+                  Academy Portal</text>
+              </svg>
+              <div class="project-overlay">
+                <div class="d-flex gap-2">
+                  <a href="https://github.com" target="_blank" class="btn btn-dark btn-sm border border-secondary"
+                    aria-label="GitHub"><i class="bi bi-github"></i></a>
+                  <a href="index.html" class="btn-cyber btn-sm">Self Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <span
+                class="badge bg-primary bg-opacity-25 text-accent-cyan border border-primary border-opacity-50 mb-2">Web
+                / Branding</span>
+              <h4>Brainsteady Brand Portal</h4>
+              <p class="small text-secondary">
+                A static multi-page website featuring high-end dark styling, glassmorphism, responsive elements, and
+                clean SEO settings.
+              </p>
+              <div class="d-flex flex-wrap gap-1 mt-3">
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">HTML5</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">CSS3</span>
+                <span
+                  class="badge bg-secondary bg-opacity-25 text-light border border-secondary border-opacity-50">Bootstrap
+                  5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black border-top border-secondary border-opacity-10">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <!-- Logo & Bio -->
+        <div class="col-lg-4">
+          <a class="navbar-brand d-flex align-items-center mb-3" href="index.html">
+            <img src="images/logo.jpg" alt="Brainsteady Tech Logo" class="brand-logo me-2">
+            <span>BRAINSTEADY TECH</span>
+          </a>
+          <p class="small text-muted">
+            Building premium digital solutions and providing structured tech mentorship. Founded by an ambitious
+            developer to help businesses and learners thrive.
+          </p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="https://github.com" target="_blank" class="text-secondary hover-cyan" aria-label="GitHub"><i
+                class="bi bi-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="text-secondary hover-cyan" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" class="text-secondary hover-cyan" aria-label="Instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://wa.me" target="_blank" class="text-secondary hover-cyan" aria-label="WhatsApp"><i
+                class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <!-- Quick Navigation -->
+        <div class="col-md-4 col-lg-3 offset-lg-1">
+          <h6 class="text-uppercase fw-bold text-light mb-3">Navigation</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="index.html" class="text-secondary text-decoration-none hover-cyan">Home</a></li>
+            <li><a href="about.html" class="text-secondary text-decoration-none hover-cyan">About Us</a></li>
+            <li><a href="services.html" class="text-secondary text-decoration-none hover-cyan">Services</a></li>
+            <li><a href="projects.html" class="text-secondary text-decoration-none hover-cyan">Projects</a></li>
+            <li><a href="resources.html" class="text-secondary text-decoration-none hover-cyan">Resources</a></li>
+            <li><a href="contact.html" class="text-secondary text-decoration-none hover-cyan">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Services list -->
+        <div class="col-md-4 col-lg-2">
+          <h6 class="text-uppercase fw-bold text-light mb-3">Our Services</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+            <li>Website Development</li>
+            <li>Poster & Logo Design</li>
+            <li>1-on-1 Coding Tutoring</li>
+            <li>Academic Project Support</li>
+            <li>Cloud & Security Labs</li>
+          </ul>
+        </div>
+        <!-- Contact placeholder -->
+        <div class="col-md-4 col-lg-2">
+          <h6 class="text-uppercase fw-bold text-light mb-3">Contact</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li class="text-muted"><i
+                class="bi bi-envelope-fill me-2 text-gradient-cyan-blue"></i>hello@brainsteady.tech</li>
+            <li class="text-muted"><i class="bi bi-geo-alt-fill me-2 text-gradient-cyan-blue"></i>Remote Services</li>
+            <li class="text-muted"><i class="bi bi-clock-fill me-2 text-gradient-cyan-blue"></i>Mon - Fri, 9am - 6pm
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary border-opacity-10 my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start small text-muted">
+          &copy; 2026 Brainsteady Tech. All rights reserved. Optimized for GitHub Pages.
+        </div>
+        <div class="col-md-6 text-center text-md-end small text-muted mt-2 mt-md-0">
+          Designed by a Technical Founder.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button type="button" class="btn btn-primary" id="btn-back-to-top" aria-label="Scroll back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
